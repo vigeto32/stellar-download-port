@@ -58,15 +58,15 @@ const Index = () => {
 
         {/* Game title */}
         <h1 
-          className="mb-4 text-6xl md:text-8xl lg:text-9xl font-black text-center animate-fade-in-up bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-text-glow"
-          style={{ animationDelay: "0.4s" }}
+          className="mb-4 text-6xl md:text-8xl lg:text-9xl font-cinzel font-black text-center animate-fade-in-up bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-text-glow tracking-wider"
+          style={{ animationDelay: "0.4s", letterSpacing: '0.1em' }}
         >
-          EPIC GAME
+          Ever After
         </h1>
 
         {/* Subtitle */}
         <p 
-          className="mb-12 text-xl md:text-2xl text-muted-foreground animate-fade-in-up text-center max-w-2xl"
+          className="mb-12 text-xl md:text-2xl text-muted-foreground animate-fade-in-up text-center max-w-2xl font-cormorant italic"
           style={{ animationDelay: "0.6s" }}
         >
           Experience the ultimate gaming adventure
