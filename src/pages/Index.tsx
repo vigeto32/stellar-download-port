@@ -56,28 +56,13 @@ const Index = () => {
           <Sparkles className="relative w-16 h-16 text-secondary animate-neon-flicker" />
         </div>
 
-        {/* Game title with glitch effect */}
-        <div className="relative mb-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-          {/* Glitch layers */}
-          <h1 
-            className="absolute top-0 left-0 text-6xl md:text-8xl lg:text-9xl font-black text-center bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent opacity-70 animate-glitch"
-            style={{ clipPath: "polygon(0 0, 100% 0, 100% 45%, 0 45%)" }}
-          >
-            EPIC GAME
-          </h1>
-          <h1 
-            className="absolute top-0 left-0 text-6xl md:text-8xl lg:text-9xl font-black text-center bg-gradient-to-r from-accent via-secondary to-primary bg-clip-text text-transparent opacity-70 animate-glitch"
-            style={{ clipPath: "polygon(0 55%, 100% 55%, 100% 100%, 0 100%)", animationDelay: "0.1s" }}
-          >
-            EPIC GAME
-          </h1>
-          {/* Main title */}
-          <h1 
-            className="relative text-6xl md:text-8xl lg:text-9xl font-black text-center bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-text-glow"
-          >
-            EPIC GAME
-          </h1>
-        </div>
+        {/* Game title */}
+        <h1 
+          className="mb-4 text-6xl md:text-8xl lg:text-9xl font-black text-center animate-fade-in-up bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-text-glow"
+          style={{ animationDelay: "0.4s" }}
+        >
+          EPIC GAME
+        </h1>
 
         {/* Subtitle */}
         <p 
@@ -101,11 +86,11 @@ const Index = () => {
             <Button 
               variant="gaming" 
               size="lg"
-              className="relative text-lg md:text-xl px-12 py-8 rounded-2xl transition-all duration-300 overflow-hidden animate-bounce-slow"
+              className="relative text-lg md:text-xl px-12 py-8 rounded-2xl transition-all duration-300 overflow-hidden"
             >
               {/* Shimmer overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" style={{ backgroundSize: "1000px 100%" }} />
-              <Download className="w-6 h-6 md:w-8 md:h-8 animate-bounce-slow" />
+              <Download className="w-6 h-6 md:w-8 md:h-8" />
               <span className="relative z-10">Download Here</span>
             </Button>
           </a>
