@@ -18,7 +18,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-blue-950 to-black">
       {/* Background music */}
-      <audio ref={audioRef} loop>
+      <audio ref={audioRef}>
         <source src={backgroundMusic} type="audio/mpeg" />
       </audio>
       {/* Animated background gradient overlay */}
