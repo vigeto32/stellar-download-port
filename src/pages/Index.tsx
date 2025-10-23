@@ -2,17 +2,28 @@ import { Button } from "@/components/ui/button";
 import { Download, Sparkles } from "lucide-react";
 import gamePreviewGif from "@/assets/game-preview.gif";
 import gameVideo from "@/assets/game-video.mp4";
+import backgroundMusic from "@/assets/background-music.mp3";
+import { useEffect, useRef } from "react";
 
 const Index = () => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.3;
+      audioRef.current.play().catch(console.error);
+    }
+  }, []);
+
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-background via-[hsl(280,50%,10%)] to-background">
-      {/* Animated background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 animate-gradient-shift bg-[length:200%_200%]" />
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-blue-950 to-black">
+      {/* Background music */}
+      <audio ref={audioRef} loop>
+        <source src={backgroundMusic} type="audio/mpeg" />
+      </audio>
       
-      {/* Glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-glow-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px] animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-secondary/15 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: "3s" }} />
+      {/* Animated background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-blue-800/10 to-blue-950/10 animate-gradient-shift bg-[length:200%_200%]" />
       
       {/* Rotating rings */}
       <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] border-2 border-primary/10 rounded-full animate-rotate-slow" />
