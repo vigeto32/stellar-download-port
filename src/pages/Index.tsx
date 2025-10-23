@@ -2,26 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Download, Sparkles } from "lucide-react";
 import gamePreviewGif from "@/assets/game-preview.gif";
 import gameVideo from "@/assets/game-video.mp4";
-import backgroundMusic from "@/assets/background-music.mp3";
-import { useEffect, useRef } from "react";
 
 const Index = () => {
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.3;
-      audioRef.current.play().catch(console.error);
-    }
-  }, []);
-
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-blue-950 to-black">
-      {/* Background music */}
-      <audio ref={audioRef} loop>
-        <source src={backgroundMusic} type="audio/mpeg" />
-      </audio>
-      
       {/* Animated background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-blue-800/10 to-blue-950/10 animate-gradient-shift bg-[length:200%_200%]" />
       
