@@ -3,12 +3,10 @@ import { Download } from "lucide-react";
 import gamePreviewGif from "@/assets/game-preview.gif";
 import gameVideo from "@/assets/game-video.mp4";
 import backgroundMusic from "@/assets/background-music.mp3";
-import { useEffect, useRef, useState } from "react";
-import LoadingScreen from "@/components/LoadingScreen";
+import { useEffect, useRef } from "react";
 
 const Index = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -27,9 +25,7 @@ const Index = () => {
   }, []);
 
   return (
-    <>
-      {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
-      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-blue-950 to-black">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-blue-950 to-black">
       {/* Background music (plays on first click) */}
       <audio ref={audioRef} loop preload="auto">
         <source src={backgroundMusic} type="audio/mpeg" />
@@ -188,7 +184,6 @@ const Index = () => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 
