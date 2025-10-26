@@ -34,43 +34,46 @@ const Index = () => {
       {/* Animated background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-blue-800/10 to-blue-950/10 animate-gradient-shift bg-[length:200%_200%]" />
 
-      {/* Rotating rings */}
-      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] border-2 border-primary/10 rounded-full animate-rotate-slow" />
-      <div
-        className="absolute bottom-1/3 left-1/3 w-[400px] h-[400px] border-2 border-accent/10 rounded-full animate-rotate-slow"
-        style={{ animationDirection: "reverse", animationDuration: "30s" }}
-      />
-
-      {/* Scanline effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent h-32 animate-scanline" />
-      </div>
-
-      {/* Particle dots */}
+      {/* Falling stars */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(50)].map((_, i) => {
-          const size = Math.random() > 0.7 ? "w-2 h-2" : "w-1 h-1";
-          const color =
-            Math.random() > 0.5
-              ? "bg-secondary"
-              : Math.random() > 0.5
-              ? "bg-primary"
-              : "bg-accent";
+        {[...Array(100)].map((_, i) => {
+          const size = Math.random() > 0.8 ? "w-1 h-1" : "w-0.5 h-0.5";
+          const duration = 3 + Math.random() * 7;
+          const delay = Math.random() * 5;
+          const leftPosition = Math.random() * 100;
+          const isTwinkle = Math.random() > 0.7;
+          
           return (
             <div
               key={i}
-              className={`absolute ${size} ${color} rounded-full animate-float`}
+              className={`absolute ${size} bg-white rounded-full animate-fall ${isTwinkle ? 'animate-pulse' : ''}`}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 6}s`,
-                animationDuration: `${6 + Math.random() * 4}s`,
-                opacity: 0.2 + Math.random() * 0.5,
-                filter: Math.random() > 0.5 ? "blur(1px)" : "none",
+                left: `${leftPosition}%`,
+                top: `-5%`,
+                animationDelay: `${delay}s`,
+                animationDuration: `${duration}s`,
+                opacity: 0.3 + Math.random() * 0.7,
+                boxShadow: `0 0 ${Math.random() > 0.5 ? '4px' : '2px'} rgba(255, 255, 255, 0.8)`,
               }}
             />
           );
         })}
+      </div>
+
+      {/* Shooting stars */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full animate-shooting-star"
+            style={{
+              left: `${20 + Math.random() * 60}%`,
+              top: `${10 + Math.random() * 30}%`,
+              animationDelay: `${i * 3 + Math.random() * 2}s`,
+              boxShadow: '0 0 6px rgba(255, 255, 255, 0.9), 0 0 12px rgba(147, 197, 253, 0.5)',
+            }}
+          />
+        ))}
       </div>
 
       {/* Main content */}
@@ -100,7 +103,7 @@ const Index = () => {
           />
 
           <a
-            href="https://drive.google.com/drive/folders/1YGIiIfegPZntJX1Z2xwqSVgr94LC2A8b"
+            href="https://drive.google.com/file/d/1XXD7LvzSUoXGmPoh5fzr08Cu47cVJcEG/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >
