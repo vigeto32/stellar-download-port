@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import gamePreviewGif from "@/assets/game-preview.gif";
+import gamePreviewMenu from "@/assets/game-preview-menu.png";
+import gamePreviewGameplay from "@/assets/game-preview-gameplay.png";
 import gameVideo from "@/assets/game-video.mp4";
 import backgroundMusic from "@/assets/background-music.mp3";
 import { useEffect, useRef } from "react";
@@ -161,14 +162,23 @@ const Index = () => {
             <div className="relative group animate-fade-in-up rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/40 transition-all duration-300">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
-                src={gamePreviewGif}
-                alt="Ever After gameplay preview"
+                src={gamePreviewMenu}
+                alt="Ever After game menu"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="relative group animate-fade-in-up rounded-2xl overflow-hidden border border-secondary/20 hover:border-secondary/40 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <img
+                src={gamePreviewGameplay}
+                alt="Ever After gameplay battle"
                 className="w-full h-full object-cover"
               />
             </div>
 
             <div
-              className="relative group animate-fade-in-up rounded-2xl overflow-hidden border border-accent/20 hover:border-accent/40 transition-all duration-300"
+              className="relative group animate-fade-in-up rounded-2xl overflow-hidden border border-accent/20 hover:border-accent/40 transition-all duration-300 md:col-span-2"
               style={{ animationDelay: "0.2s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
