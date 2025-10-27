@@ -4,6 +4,7 @@ import gamePreviewMenu from "@/assets/game-preview-menu.png";
 import gamePreviewGameplay from "@/assets/game-preview-gameplay.png";
 import gamePreviewBattle from "@/assets/game-preview-battle.png";
 import backgroundMusic from "@/assets/background-music.mp3";
+import everafterLogo from "@/assets/everafter-logo.jpg";
 import { useEffect, useRef } from "react";
 
 const Index = () => {
@@ -79,12 +80,12 @@ const Index = () => {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
-        <h1
-          className="mb-4 text-6xl md:text-8xl lg:text-9xl font-cinzel font-black text-center animate-fade-in-up bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent tracking-wider"
-          style={{ animationDelay: "0.4s", letterSpacing: "0.1em" }}
-        >
-          Ever After
-        </h1>
+        <img
+          src={everafterLogo}
+          alt="Ever After"
+          className="mb-4 w-full max-w-2xl md:max-w-3xl lg:max-w-4xl animate-fade-in-up"
+          style={{ animationDelay: "0.4s" }}
+        />
 
         <p
           className="mb-12 text-xl md:text-2xl text-muted-foreground animate-fade-in-up text-center max-w-2xl font-cormorant italic"
