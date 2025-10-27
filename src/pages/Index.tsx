@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import gamePreviewMenu from "@/assets/game-preview-menu.png";
 import gamePreviewGameplay from "@/assets/game-preview-gameplay.png";
+import gamePreviewBattle from "@/assets/game-preview-battle.png";
 import backgroundMusic from "@/assets/background-music.mp3";
 import { useEffect, useRef } from "react";
 
@@ -103,7 +104,7 @@ const Index = () => {
           />
 
           <a
-            href="https://drive.google.com/file/d/18UQeggMgeTor1JD6OzA5np1DaDB9tmuu/view?fbclid=IwY2xjawNsDbxleHRuA2FlbQIxMQABHmNhT2hHKOvOaj4PEAf9GdZV9JDS0WF_DmhA_-cL0T3QYjQZlW0ytdOY7waA_aem_ctYWKGPTYMYVVNyOGs02fQ"
+            href="https://drive.google.com/file/d/1yMMpSa2zQTdIFMniLGOx4aJC2145YAk3/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -145,9 +146,6 @@ const Index = () => {
             In the halls of the prestigious Academy of Legends, a young student awakens to a brutal truth:
             only the strongest survive. Thrust into a world where combat prowess determines fate, you must
             face fellow students in intense battles that will test your skills, strategy, and determination.
-            Each victory brings you closer to becoming the ultimate champion, while every defeat teaches
-            valuable lessons. Will you rise through the ranks and claim your place among the legends, or
-            fall to those who hunger for power? The journey to strength begins now.
           </p>
         </div>
 
@@ -157,7 +155,7 @@ const Index = () => {
             Game Preview
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="relative group animate-fade-in-up rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/40 transition-all duration-300">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
@@ -172,6 +170,15 @@ const Index = () => {
               <img
                 src={gamePreviewGameplay}
                 alt="Ever After gameplay battle"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="relative group animate-fade-in-up rounded-2xl overflow-hidden border border-accent/20 hover:border-accent/40 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <img
+                src={gamePreviewBattle}
+                alt="Ever After battle scene"
                 className="w-full h-full object-cover"
               />
             </div>
