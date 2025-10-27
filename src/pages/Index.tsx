@@ -83,7 +83,7 @@ const Index = () => {
         <img
           src={everafterLogo}
           alt="Ever After"
-          className="mb-4 w-full max-w-2xl md:max-w-3xl lg:max-w-4xl animate-fade-in-up"
+          className="mb-4 w-full max-w-2xl md:max-w-3xl lg:max-w-4xl animate-fade-in-up drop-shadow-2xl"
           style={{ animationDelay: "0.4s" }}
         />
 
