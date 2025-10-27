@@ -4,7 +4,7 @@ import gamePreviewMenu from "@/assets/game-preview-menu.png";
 import gamePreviewGameplay from "@/assets/game-preview-gameplay.png";
 import gamePreviewBattle from "@/assets/game-preview-battle.png";
 import backgroundMusic from "@/assets/background-music.mp3";
-import everafterLogo from "@/assets/everafter-logo.jpg";
+import everafterLogo from "@/assets/everafter-logo.png";
 import { useEffect, useRef } from "react";
 
 const Index = () => {
