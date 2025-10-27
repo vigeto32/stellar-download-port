@@ -105,7 +105,7 @@ const Index = () => {
           />
 
           <a
-            href="https://drive.google.com/file/d/1yMMpSa2zQTdIFMniLGOx4aJC2145YAk3/view?usp=drive_link"
+            href="https://drive.google.com/uc?export=download&id=1voT2LDVkMPgAphqVm0pHok1VpemOGfNA"
             target="_blank"
             rel="noopener noreferrer"
           >
